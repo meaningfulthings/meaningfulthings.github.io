@@ -6,7 +6,17 @@
 </head>
 <body>
     <div>
-        <img src="assets/images/filtered.png"></img>
+        <picture>
+          <source 
+            srcset="assets/images/filtered-dark.png"
+            media="(prefers-color-scheme: dark)"
+          />
+          <source
+            srcset="assets/images/filtered-light.png"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          />
+          <img src="assets/images/filtered-light.png" loading="lazy" />
+        </picture>
     </div>
 </body>
 </html>
